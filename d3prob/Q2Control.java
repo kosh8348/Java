@@ -25,11 +25,9 @@ public class Q2Control {
         int zero = 0;
         if (zero == 0) {
             System.out.println("is zero");
-        }
-        else if (10 % zero == 0) {
+        } else if (10 % zero == 0) {
             System.out.println("is factor");
-        }
-        else {
+        } else {
             System.out.println("not factor");
         }
 
@@ -48,22 +46,17 @@ public class Q2Control {
             case "d":   // input == "d"
                 System.out.println("right");
                 break;
-                // 기본동작, 필수 아님
+            // 기본동작, 필수 아님
             default:
                 System.out.println("invalid");
         }
 
         switch (input) {
-            case "w" ->
-                    System.out.println("up");
-            case "a" ->
-                    System.out.println("left");
-            case "s" ->
-                    System.out.println("down");
-            case "d" ->
-                    System.out.println("right");
-            default ->
-                System.out.println("invalid");
+            case "w" -> System.out.println("up");
+            case "a" -> System.out.println("left");
+            case "s" -> System.out.println("down");
+            case "d" -> System.out.println("right");
+            default -> System.out.println("invalid");
         }
 
         // while
@@ -79,19 +72,59 @@ public class Q2Control {
         System.out.println("대출 상황 완료! 총 걸린 개월수:" + months);
 
         int[] numbers = {2, 3, 5, 6, 19, 23};
-        int i = 0;
-        int sum = 0;
-        // 총합 및 평균 구하기
+//        int i = 0;
+//        int sum = 0;
+//        // 총합 및 평균 구하기
+//
+//        while (i < 6) {
+//            System.out.println(numbers[i]);
+//            sum += numbers[i]; // 각 요소를 총합에 더함
+//            i++;
+//        }
+//
+//        double average = (double) sum / numbers.length; // 평균 계산
+//        System.out.println("총합: " + sum);
+//        System.out.println("평균: " + average);
 
-        while (i < 6) {
-            System.out.println(numbers[i]);
-            sum += numbers[i]; // 각 요소를 총합에 더함
-            i++;
+        // for
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+
+        }
+
+        // 총합, 최대, 평균
+        int sum = 0;
+        int max = -100;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];  // 배열의 요소들을 더해 총합 계산
+            if (numbers[i] > max) {
+                max = numbers[i]; // 현재 요소가 최댓값보다 크면 최댓값으로 설정
+            }
         }
 
         double average = (double) sum / numbers.length; // 평균 계산
+
         System.out.println("총합: " + sum);
+        System.out.println("최댓값: " + max);
         System.out.println("평균: " + average);
 
+        /*
+        *
+        **
+        ***
+        ****
+        *****
+         */
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print('*');
+            }
+            int a = 100;
+            System.out.println();
+        }
+
+        for(;;) {
+            System.out.println("이건 그냥 무한루프입니다.");
+        }
     }
 }

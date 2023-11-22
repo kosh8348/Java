@@ -81,6 +81,66 @@ public class D3ControlStatements {
             System.out.println("잘못된 입력입니다.");
         }
 
+        String[] fruits = {"apple", "pear", "banana"};
+        for (String name : fruits) {
+            System.out.println(name);
+        }
 
+        // 같은 기능을 하는 for문은
+        for (int i = 0; i < fruits.length; i++) {
+            String name = fruits[i];
+            System.out.println(name);
+        }
+
+        // 반복문 제어
+        int wallet = 20000;
+        int price = 5000;
+        while (true) {
+            wallet -= price;
+            if (wallet <= 0) {
+                System.out.println("돈 다 써서 더 못사먹음 ㅠㅠ");
+                // 그만먹자.(제어문)
+                break;
+            }
+            System.out.println(String.format("1인분 먹고 %d 남음", wallet));
+        }
+
+        int[] numbers = {2, 3, 5, 6, 19, 23};
+        // numbers 내부에 19가 어디있는지
+        // 있다면 그 위치를, 없다면 -1을 출력하도록
+        numbers = new int[]{1, 3, 4, 11, 19, 21, 23};
+        int target = -1;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 19) {
+                target = i;
+                // 발견 즉시 반복 종료
+                break;
+            }
+        }
+        System.out.println(target);
+
+        // continue
+        // 0 ~ 9 사이의 짝수만 출력하고 싶다.
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 != 0) {
+                continue;
+            }
+            System.out.println(i);
+        }
+        // boolean[] vaccinated = {true, true, false, false, true, true, false};
+        boolean[] vaccinated = {true, false, false, false, false, false, false, true, true};
+        int groupCount = 0;
+        for (boolean vaccine : vaccinated) {
+            if (vaccine) {
+                System.out.println("백신 맞으면 세지 않아요");
+                continue;
+            }
+            groupCount++;
+            // 일정 인원 이상있으면 입장불가
+            if (groupCount > 5) {
+                System.out.println("입장이 불가합니다...");
+                break;
+            }
+        }
     }
 }
