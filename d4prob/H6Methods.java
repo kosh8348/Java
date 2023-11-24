@@ -37,4 +37,3 @@ public class H6Methods {
         return moves;
     }
 }
-}
