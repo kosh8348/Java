@@ -33,8 +33,6 @@ public class Car implements Beeper, Drivable {
     public void drive(int kilos) {
         System.out.println("drive car");
         this.fuel -= kilos / 10;
-        System.out.println(String.format(
-                "moved: %d, current fuel: %d",
-                kilos, this.fuel));
+        System.out.println(String.format("moved: %d, current fuel: %d", kilos, this.fuel));
     }
 }
